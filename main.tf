@@ -14,7 +14,7 @@ resource "random_id" "id" {
 # Create VPC as per requirements
 */
 module "vpc" {
-  source = "../modules/services/network"
+  source = "modules/services/network"
 
   providers = {
     aws = aws.secops
@@ -31,7 +31,7 @@ module "vpc" {
 # Create BIG-IP host as per requirements
 */
 module "bigip" {
-  source = "../modules/functions/bigip"
+  source = "modules/functions/bigip"
 
   providers = {
     aws = aws.secops
@@ -53,7 +53,7 @@ module "bigip" {
 # Create BIG-IQ host as per requirements
 */
 module "bigiq" {
-  source = "../modules/functions/bigiq"
+  source = "modules/functions/bigiq"
 
   providers = {
     aws = aws.secops
@@ -74,7 +74,7 @@ module "bigiq" {
 # Create Docker host as per requirements
 */
 module "docker" {
-  source = "../modules/functions/docker"
+  source = "modules/functions/docker"
 
   providers = {
     aws = aws.secops
@@ -94,7 +94,7 @@ module "docker" {
 # Create Jump host as per requirements
 */
 module "jumphost" {
-  source = "../modules/functions/jumphost"
+  source = "modules/functions/jumphost"
 
   providers = {
     aws = aws.secops

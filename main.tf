@@ -14,7 +14,7 @@ resource "random_id" "id" {
 # Create VPC as per requirements
 */
 module "vpc" {
-  source = "modules/services/network"
+  source = "./modules/services/network"
 
   providers = {
     aws = aws.secops

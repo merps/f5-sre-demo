@@ -26,6 +26,7 @@ stages:
   - validate
   - build
   - deploy
+  - destroy
 
 validate:
   stage: validate
